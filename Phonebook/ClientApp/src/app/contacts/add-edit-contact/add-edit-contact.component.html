@@ -1,0 +1,23 @@
+<div class="d-flex flex-row bd-highlight mb-9">
+  <div class="p-2 w-100 bd-highlight">
+
+    <div class="input-group mb-3">
+      <span class="input-group-text">First Name</span>
+      <input type="text" class="form-control" [(ngModel)]="firstName">
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Last Name</span>
+      <input type="text" class="form-control" [(ngModel)]="lastName">
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Phone</span>
+      <input type="text" class="form-control" [(ngModel)]="phoneNumber">
+    </div>
+  </div>
+</div>
+<button (click)="addContact()" *ngIf="contact.id == '0'" class="btn btn-primary">
+  Add
+</button>
+<button (click)="updateContact()" *ngIf="contact.id !='0'" class="btn btn-primary">
+  Update
+</button>
